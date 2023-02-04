@@ -14,7 +14,7 @@ module.exports = {
     },
     extend: {
       colors: {
-        deepColor: '#040813 ',
+        deepColor: '#040813',
         grayColor: '#99989F',
       },
       fontFamily: {

@@ -11,8 +11,9 @@ export default function Navbar() {
     <nav className='flex w-full items-center justify-between bg-deepColor py-5 px-5 md:px-20 xxl:mx-auto xxl:w-6/12'>
       <div className='flex flex-row'>
         <Link href='/'>
-          <a className='flex items-center text-2xl font-bold tracking-wider text-grayColor'>
-            <img src='/logo.png' alt='logo' className='mr-2' /> Rent Properties
+          <a className='flex items-center text-2xl font-bold tracking-wider text-white'>
+            <img src='/logo.png' alt='logo' className='mr-2 rounded-md' /> Rent
+            Properties
           </a>
         </Link>
       </div>
@@ -23,7 +24,7 @@ export default function Navbar() {
             key={nav.id}
             className={`cursor-pointer text-lg ${
               index === navLinks.length - 1 ? 'mr-0' : 'mr-10'
-            } font-bold text-grayColor`}
+            } font-bold text-white`}
           >
             <Link href={`${nav.page}`}>
               <a>{nav.title}</a>
