@@ -1,11 +1,17 @@
 interface Props {
   title: string;
+  text?: string;
 }
 
-export default function SectionTitle({ title }: Props) {
+export default function SectionTitle({ title, text }: Props) {
   return (
-    <div className='mt-20 px-10 md:mx-10 md:px-12 lg:mt-28'>
-      <h2 className='text-2xl font-bold text-blueColor md:text-3xl'>{title}</h2>
+    <div className='text-center'>
+      <h2 className='text-2xl font-bold tracking-wide text-white md:text-4xl'>
+        {title}
+      </h2>
+      <p className='mt-1 text-xl font-bold tracking-wide text-grayColor'>
+        {text}
+      </p>
     </div>
   );
 }

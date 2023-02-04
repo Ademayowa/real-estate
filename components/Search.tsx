@@ -4,7 +4,7 @@ import { HiOutlineLocationMarker } from 'react-icons/hi';
 
 export default function Search() {
   return (
-    <section className='relative mx-auto my-10 flex w-11/12 flex-col justify-between rounded-lg bg-[#151421] py-10 shadow-lg md:w-11/12 md:flex-row md:p-5 lg:w-7/12 xxl:w-4/12'>
+    <section className='relative mx-auto my-10 flex w-11/12 flex-col justify-between rounded-lg bg-deepGray py-10 shadow-lg md:w-11/12 md:flex-row md:p-5 lg:w-7/12 xxl:w-4/12'>
       <div className='flex items-center space-x-2'>
         <BsSearch className='hidden h-5 w-5 text-blueColor md:block' />
         <input
