@@ -16,6 +16,7 @@ module.exports = {
       colors: {
         deepColor: '#040813',
         grayColor: '#99989F',
+        blueColor: '#16A8EA',
       },
       fontFamily: {
         manrope: ['Manrope', 'sans-serif'],

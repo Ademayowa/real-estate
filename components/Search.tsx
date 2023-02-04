@@ -4,30 +4,30 @@ import { HiOutlineLocationMarker } from 'react-icons/hi';
 
 export default function Search() {
   return (
-    <div className='relative mx-20 -mt-10 flex flex-col justify-between rounded-lg bg-white px-5 py-10 shadow-lg md:flex-row md:p-5'>
+    <section className='relative mx-auto my-10 flex w-11/12 flex-col justify-between rounded-lg bg-[#151421] py-10 shadow-lg md:w-11/12 md:flex-row md:p-5 lg:w-7/12 xxl:w-4/12'>
       <div className='flex items-center space-x-2'>
-        <BsSearch className='hidden h-5 w-5 text-sky-500 md:block' />
+        <BsSearch className='hidden h-5 w-5 text-blueColor md:block' />
         <input
           type='text'
-          placeholder='Search jobs'
-          className='mb-4 w-full rounded-md border border-sky-500 bg-transparent pl-5 leading-10 outline-none md:mb-0 md:border-none md:pl-0'
+          placeholder='Search properties'
+          className='mb-4 !mr-3 h-16 w-full rounded-md border border-blueColor bg-transparent pl-5 leading-10 text-white outline-none md:mb-0 md:h-auto md:border-none md:pl-0'
         />
       </div>
 
       <div className='flex items-center space-x-2 md:border-l-4 md:border-blue-200'>
-        <HiOutlineLocationMarker className='ml-4 hidden h-5 w-5 text-sky-500 md:block' />
+        <HiOutlineLocationMarker className='ml-4 hidden h-5 w-5 text-blueColor md:block' />
         <input
           type='text'
           placeholder='city or state'
-          className='mb-4 w-full rounded-md border border-sky-500 bg-transparent pl-5 leading-10 outline-none md:mb-0 md:border-none md:pl-0'
+          className='mb-4 !mr-3 h-16 w-full rounded-md border border-blueColor bg-transparent pl-5 leading-10 text-white outline-none md:mb-0 md:h-auto md:border-none md:pl-0'
         />
       </div>
 
-      <div className='mx-1 flex flex-auto items-center md:mx-0 md:flex-none'>
-        <button className='flex flex-auto justify-center rounded bg-red-500 px-5 py-2.5 font-bold text-white'>
-          Find jobs
+      <div className='mx-2 flex flex-auto items-center md:mx-0 md:flex-none'>
+        <button className='flex flex-auto justify-center rounded bg-blueColor px-5 py-4 font-bold text-white md:py-3'>
+          Find properties
         </button>
       </div>
-    </div>
+    </section>
   );
 }
