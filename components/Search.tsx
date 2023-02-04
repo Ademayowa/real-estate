@@ -10,7 +10,7 @@ export default function Search() {
         <input
           type='text'
           placeholder='Search properties'
-          className='mb-4 !mr-3 h-16 w-full rounded-md border border-blueColor bg-transparent pl-5 leading-10 text-white outline-none md:mb-0 md:h-auto md:border-none md:pl-0'
+          className='mb-4 !mr-3 h-16 w-full rounded-md border border-slate-500 bg-transparent pl-5 leading-10 text-white outline-none md:mb-0 md:h-auto md:border-none md:pl-0'
         />
       </div>
 
@@ -19,7 +19,7 @@ export default function Search() {
         <input
           type='text'
           placeholder='city or state'
-          className='mb-4 !mr-3 h-16 w-full rounded-md border border-blueColor bg-transparent pl-5 leading-10 text-white outline-none md:mb-0 md:h-auto md:border-none md:pl-0'
+          className='mb-4 !mr-3 h-16 w-full rounded-md border border-slate-500 bg-transparent pl-5 leading-10 text-white outline-none md:mb-0 md:h-auto md:border-none md:pl-0'
         />
       </div>
 
