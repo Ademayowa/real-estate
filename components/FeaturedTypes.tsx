@@ -2,7 +2,7 @@ import SectionTitle from './SectionTitle';
 
 export default function FeaturedTypes() {
   return (
-    <section className='mt-20 md:mt-40 md:px-20 xxl:mx-auto xxl:w-6/12'>
+    <section className='mt-20 md:mt-40'>
       <SectionTitle
         title='Featured Property Types'
         text='Find All Type of Properties'

@@ -3,7 +3,7 @@ import SectionTitle from './SectionTitle';
 
 export default function Property() {
   return (
-    <section className='relative mt-20 pb-20 md:mt-40 md:px-20 xxl:mx-auto xxl:w-6/12'>
+    <section className='relative mt-20 pb-20 md:mt-40'>
       <SectionTitle
         title='Recent Property Listed'
         text='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.'
