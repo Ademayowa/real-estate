@@ -1,7 +1,6 @@
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import { client } from '@/lib/sanity.client';
-import { fetchJobs } from '@/utils/fetchJobs';
 import { HiOutlineLocationMarker } from 'react-icons/hi';
 import { Job } from '../typings';
 
