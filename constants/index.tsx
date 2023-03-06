@@ -1,5 +1,7 @@
-import BsHouseGear from 'react-icons/bs';
-import ImOffice from 'react-icons/im';
+import { ImOffice } from 'react-icons/im';
+import { BsHouse } from 'react-icons/bs';
+import { TbBuildingWarehouse } from 'react-icons/tb';
+import { GiGreenhouse } from 'react-icons/gi';
 
 export const navLinks = [
   {
@@ -16,13 +18,27 @@ export const navLinks = [
 
 export const properties = [
   {
-    icon: '<BsHouseGear />',
+    id: 1,
+    icon: <BsHouse />,
     title: 'Apartment',
     text: '2000 properties',
   },
   {
-    id: '<ImOffice />',
-    title: 'Office & Studio',
-    page: '400 properties',
+    id: 2,
+    icon: <ImOffice />,
+    title: 'Office',
+    text: '800 properties',
+  },
+  {
+    id: 3,
+    icon: <GiGreenhouse />,
+    title: 'Studio',
+    text: '500 properties',
+  },
+  {
+    id: 4,
+    icon: <TbBuildingWarehouse />,
+    title: 'Store',
+    text: '300 properties',
   },
 ];
