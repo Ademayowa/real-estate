@@ -1,4 +1,4 @@
-import FeaturedTypes from '@/components/FeaturedTypes';
+import FeaturedProperty from '@/components/FeaturedProperty';
 import Hero from '@/components/Hero';
 import Layout from '@/components/Layout';
 import Property from '@/components/Property';
@@ -10,7 +10,7 @@ export default function HomePage() {
       <main className='md:px-20 xxl:mx-auto xxl:w-6/12'>
         <Hero />
         <Search />
-        <FeaturedTypes />
+        <FeaturedProperty />
         <Property />
       </main>
     </Layout>

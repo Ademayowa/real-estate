@@ -1,5 +1,3 @@
-import { Slug } from 'sanity';
-
 export type Job = {
   _id: string;
   title: string;
@@ -9,8 +7,12 @@ export type Job = {
   slug: {
     current: string;
   };
-  // requirement: {
-  //   require: string;
-  //   _id: string;
-  // }[];
 };
+
+export interface Property {
+  id: number;
+  icon: string;
+  title: string;
+  text: string;
+  property: [];
+}

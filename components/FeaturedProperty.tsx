@@ -1,7 +1,8 @@
 import SectionTitle from './SectionTitle';
 import { properties } from '@/constants/index';
+import { Property } from 'typings';
 
-export default function FeaturedTypes() {
+export default function FeaturedProperty() {
   return (
     <section className='mt-20 md:mt-40'>
       <SectionTitle
