@@ -6,6 +6,7 @@ export default function FeaturedProperty() {
   return (
     <section className='mt-20 md:mt-40'>
       <SectionTitle
+        fontSize
         title='Featured Property Types'
         text='Find All Type of Properties'
         fontBold
