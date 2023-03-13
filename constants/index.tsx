@@ -69,3 +69,22 @@ export const rentProperty = [
     price: '$2,500/month',
   },
 ];
+
+export const amenities = [
+  {
+    id: 1,
+    items: 'Laundry Room',
+  },
+  {
+    id: 2,
+    items: 'Car Parking',
+  },
+  {
+    id: 3,
+    items: 'Gym',
+  },
+  {
+    id: 4,
+    items: 'Swimming Pool',
+  },
+];
