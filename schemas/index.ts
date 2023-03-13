@@ -1,3 +1,3 @@
-import job from './job';
+import property from './property';
 
-export const schemaTypes = [job];
+export const schemaTypes = [property];
