@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { BASE_URL } from '../utils';
+import { BASE_URL } from '@/utils/index';
 import FeaturedProperty from '@/components/FeaturedProperty';
 import Hero from '@/components/Hero';
 import Layout from '@/components/Layout';
@@ -7,6 +7,8 @@ import Property from '@/components/Property';
 import Search from '@/components/Search';
 import { client } from '@/lib/sanity.client';
 import { Properties } from '../typings';
+import NoResult from '@/components/NoResult';
+import { GetServerSideProps } from 'next';
 
 interface Props {
   properties: Properties[];
@@ -19,13 +21,20 @@ export default function HomePage({ properties }: Props) {
         <Hero />
         <Search />
         <FeaturedProperty />
-        <Property />
+
+        {properties.length ? (
+          properties.map((property: Properties) => (
+            <Property key={property._id} property={property} />
+          ))
+        ) : (
+          <NoResult text='No Properties Found' />
+        )}
       </main>
     </Layout>
   );
 }
 
-export const getServerSideProps = async () => {
+export const getServerSideProps: GetServerSideProps = async () => {
   const { data } = await axios.get(`${BASE_URL}/api/property`);
 
   return {

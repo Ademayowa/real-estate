@@ -1,6 +1,6 @@
 import SectionTitle from './SectionTitle';
 import { properties } from '@/constants/index';
-import { Property } from 'typings';
+// import { Properties } from 'typings';
 
 export default function FeaturedProperty() {
   return (
