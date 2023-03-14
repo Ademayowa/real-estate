@@ -6,9 +6,9 @@ const apiVersion = process.env.NEXT_PUBLIC_SANITY_API_VERSION;
 const token = process.env.SANITY_API_TOKEN;
 
 export const client = createClient({
-  projectId,
-  dataset,
-  apiVersion,
-  token,
+  projectId: 'xnq63uam',
+  dataset: 'production',
+  apiVersion: '2022-11-15',
   useCdn: false,
+  token: token,
 });

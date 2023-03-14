@@ -3,6 +3,13 @@ import Hero from '@/components/Hero';
 import Layout from '@/components/Layout';
 import Property from '@/components/Property';
 import Search from '@/components/Search';
+import { client } from '@/lib/sanity.client';
+import axios from 'axios';
+import { Properties } from '../typings';
+
+interface Props {
+  properties: Properties[];
+}
 
 export default function HomePage() {
   return (
@@ -16,3 +23,26 @@ export default function HomePage() {
     </Layout>
   );
 }
+
+export const getServerSideProps = async () => {
+  const query = `
+  *[_type == "property"]{ 
+    _id,
+    apartment,
+    image,
+    location,
+    price,
+    propertyType,
+  } 
+  `;
+
+  const properties = await client.fetch(query);
+
+  console.log(properties);
+
+  return {
+    props: {
+      properties,
+    },
+  };
+};
