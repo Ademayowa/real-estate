@@ -2,10 +2,14 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { BiUser } from 'react-icons/bi';
 import { navLinks } from '@/constants/index';
+import { GoogleLogin, googleLogout } from '@react-oauth/google';
+import { createOrGetUser } from '@/utils/index';
 
 export default function Navbar() {
   const [active, setActive] = useState<any>('Home');
   const [toggle, setToggle] = useState<boolean>(false);
+
+  const user = false;
 
   return (
     <nav className='flex w-full items-center justify-between bg-deepColor py-5 px-5 md:px-20 xxl:mx-auto xxl:w-6/12'>
@@ -33,6 +37,17 @@ export default function Navbar() {
         ))}
       </ul>
 
+      <div className='ml-5 hidden md:block'>
+        {user ? (
+          <div>LoggedIn</div>
+        ) : (
+          <GoogleLogin
+            onSuccess={(response) => createOrGetUser(response)}
+            onError={() => console.log('Error')}
+          />
+        )}
+      </div>
+
       {/* Mobile screens */}
       <div className='flex flex-1 cursor-pointer items-center justify-end md:hidden'>
         <img
@@ -45,7 +60,7 @@ export default function Navbar() {
         <div
           className={`${
             !toggle ? 'hidden' : 'flex'
-          } bg-blueColor absolute top-20 right-0 !z-50 my-2 h-[80vh] w-full p-6`}
+          } absolute top-20 right-0 !z-50 my-2 h-[80vh] w-full bg-gray-400 p-6`}
         >
           <ul className='flex flex-1 !cursor-pointer list-none flex-col items-start text-xl font-bold'>
             {navLinks.map((nav, index) => (
@@ -63,6 +78,17 @@ export default function Navbar() {
             ))}
           </ul>
         </div>
+
+        {/* <div className='ml-5 hidden lg:block'>
+          {user ? (
+            <div>LoggedIn</div>
+          ) : (
+            <GoogleLogin
+              onSuccess={(response) => createOrGetUser(response)}
+              onError={() => console.log('Error')}
+            />
+          )}
+        </div> */}
       </div>
     </nav>
   );
